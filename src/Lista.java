@@ -6,13 +6,38 @@ public class Lista<T> {
         root = null;
     }
 
-    public void add(T newval) {
+    public void add(Nodo<T> newnode) {
         if (root==null) {
-            root = new Nodo<>(newval);
+            root = newnode;
         } else {
             Nodo<T> temp = root;
             while (temp.getSucc()!=null) temp=temp.getSucc();
-            temp.setSucc(new Nodo<>(newval));
+            temp.setSucc(newnode);
         }
     }
+
+    public void add(T newval) {
+        Nodo<T> newnode = new Nodo<>(newval);
+        this.add(newnode);
+    }
+
+    public void addHead( T newval) {
+        Nodo<T> nuovonodo = new Nodo<>(newval);
+        nuovonodo.setSucc(root);
+        root = nuovonodo; 
+    }
+
+    @Override
+    public String toString() {
+        String result = "Lista: ";
+        Nodo<T> tmp = root;
+        while (tmp!=null) {
+            result += " --> " + tmp;
+            tmp = tmp.getSucc();      
+        }
+        return result;
+    }
+
+    
+
 }
