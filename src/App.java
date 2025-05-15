@@ -9,6 +9,13 @@ public class App {
         l.add("Milan");
         l.addHead("Catanzaro");
         System.out.println(l);
+
+        ListaOrdinata<String> lo = new ListaOrdinata<>();
+        lo.add("Bologna");
+        lo.add("Milan");
+        lo.add("Catanzaro");
+        System.out.println(lo);
+
         
 
         // test MyIntArray
