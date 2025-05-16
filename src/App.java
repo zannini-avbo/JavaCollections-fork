@@ -14,8 +14,13 @@ public class App {
         lo.add("Bologna");
         lo.add("Milan");
         lo.add("Catanzaro");
+        lo.add("Atalanta");
+        lo.add("Verona");
+        lo.add("Napoli");
+        lo.add("Brescia");
+        lo.add("Zurigo");
+        lo.add("Roma");
         System.out.println(lo);
-
         
 
         // test MyIntArray
