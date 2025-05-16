@@ -4,6 +4,13 @@ public class App {
         // test Hello World
         System.out.println("Hello, World!");
 
+        Tree<String> tree = new Tree<>();
+        tree.add("A");
+        tree.add("Z");
+        tree.add("R");
+        tree.add("P");
+        System.out.println(tree);
+ /*
         Lista<String> l = new Lista<>();
         l.add("Bologna");
         l.add("Milan");
@@ -21,13 +28,12 @@ public class App {
         lo.add("Zurigo");
         lo.add("Roma");
         System.out.println(lo);
-        
+ */        
 
-        // test MyIntArray
-        /*
+ /*
         MyIntArray a = new MyIntArray();
         for (int i=0; i<10; i++) a.add(i);
         System.out.println(a);
-        */
+ */
     }
 }
