@@ -1,39 +1,26 @@
+
+import java.io.File;
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
 
-        // test Hello World
-        System.out.println("Hello, World!");
+       // test Hello World
+       System.out.println("Java Collection Samples!");
 
-        Tree<String> tree = new Tree<>();
-        tree.add("A");
-        tree.add("Z");
-        tree.add("R");
-        tree.add("P");
-        System.out.println(tree);
- /*
-        Lista<String> l = new Lista<>();
-        l.add("Bologna");
-        l.add("Milan");
-        l.addHead("Catanzaro");
-        System.out.println(l);
+       ListaOrdinata<String> lo = new ListaOrdinata<>();
+       Tree<String> tree = new Tree<>();
 
-        ListaOrdinata<String> lo = new ListaOrdinata<>();
-        lo.add("Bologna");
-        lo.add("Milan");
-        lo.add("Catanzaro");
-        lo.add("Atalanta");
-        lo.add("Verona");
-        lo.add("Napoli");
-        lo.add("Brescia");
-        lo.add("Zurigo");
-        lo.add("Roma");
-        System.out.println(lo);
- */        
+       File file = new File("data/province.txt");
+       try (Scanner scan = new Scanner(file)) {
+              while (scan.hasNextLine()) {
+                  String line = scan.nextLine();
+                  lo.add(line);
+                  tree.add(line);
+              }
+       }
+       System.out.println(lo);
+       System.out.println(tree);
 
- /*
-        MyIntArray a = new MyIntArray();
-        for (int i=0; i<10; i++) a.add(i);
-        System.out.println(a);
- */
     }
 }
