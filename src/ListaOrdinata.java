@@ -18,5 +18,10 @@ public class ListaOrdinata<T extends Comparable<T>> extends Lista<T> {
         temp.setSucc(newnode);
     }
 
+    @Override
+    public String toString() {
+        return "Stringa ordinata - " + super.toString();
+    }
+
     
 } 
