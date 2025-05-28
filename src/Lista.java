@@ -1,3 +1,4 @@
+
 public class Lista<T> {
 
     protected Nodo<T> root;
@@ -38,6 +39,22 @@ public class Lista<T> {
         return result;
     }
 
-    
+    public int getLength() {
+        int n = 0;
+        Nodo<T> tmp;
+        for (n=0, tmp=root; tmp!=null; n++, tmp=tmp.getSucc());
+        return n;
+    }
+
+    public void removePosition( int pos ) {
+        if ( pos<=0 || root==null || pos>getLength() ) {
+            System.out.println("Impossibile rimuovere un nodo in una posizione inesistente");
+            return;
+        }
+        if (pos==1) { root = root.getSucc(); return; }
+        Nodo<T> tmp = root;
+        for (int i=2; i<pos; i++) tmp = tmp.getSucc();
+    	tmp.setSucc( tmp.getSucc().getSucc() );
+    }
 
 }
