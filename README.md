@@ -20,3 +20,4 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 ## Progetto [ITA below]
 
 Benvenuto allo sviluppo in Java utilizzando Visual Studio Code.
+*--
